@@ -1,0 +1,217 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container{
+    position: fixed;
+    background-color: rgb(33, 156, 144);
+    height: 97.5%;
+    border: 1.25vh solid rgb(24, 26, 92);
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    
+}
+
+.buttons{
+    grid-column: 1/2;
+    grid-row: 2/10;
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
+    transform: translateY(-40px) translateX(22px);
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.button p,h2{
+    font-family: "Sixtyfour", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "BLED" 0,
+        "SCAN" -5;
+}
+
+.power{
+    background-color: rgb(216, 63, 49);
+    color: whitesmoke;
+    border-radius: 100px;
+    margin: 10px;
+    height: 75%;
+    width: 100%;
+    align-self: center;
+    transform: translateX(-10px);
+    box-shadow: 6px 6px 0px 3px rgb(56, 80, 76);
+}
+
+.power_clicked{
+    background-color: rgb(228, 32, 15);
+    color: rgb(255, 247, 0);
+    text-shadow: 1px 1px 0.5px rgb(255, 247, 0);
+    border-radius: 100px;
+    margin: 10px;
+    height: 75%;
+    width: 100%;
+    align-self: center;
+    transform: translateX(-10px);
+    box-shadow: 6px 6px 0px 3px rgb(56, 80, 76);
+}
+
+.power:hover{
+    color: rgb(255, 247, 0);
+    text-shadow: 1px 1px 0.5px rgb(225, 225, 225);
+    background-color: rgb(228, 32, 15);
+    box-shadow: 6px 6px 2px 3px rgb(56, 80, 76);
+}
+
+.power:active{
+    transform: translateX(-4px) translateY(4px);
+    box-shadow: 4px 4px 0px 3px rgb(80, 56, 56);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.select{
+    background-color: rgb(233, 184, 36);
+    border-radius: 25px;
+    margin: 10px;
+    box-shadow: 4px 4px 0px 5px rgb(255, 132, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.select:hover{
+    color: rgb(214, 39, 0);
+    text-shadow: 1px 1px 0.5px red;
+    background-color: rgb(255, 191, 0);
+    box-shadow: 4px 4px 3px 6px rgb(255, 132, 0);
+}
+
+.select:active{
+    transform: translateX(4px) translateY(4px);
+    box-shadow: 4px 4px 0px 5px rgb(217, 112, 0)
+}
+
+.current{
+    color: rgb(214, 39, 0);
+    text-shadow: 1px 1px 0.5px red;
+    background-color: rgb(255, 191, 0);
+}
+
+.screen{
+    margin: 0px 50px;
+    background-color: rgb(31, 31, 31);
+    grid-column: 2/11;
+    grid-row: 2/10;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px 7px rgba(147, 147, 147, 0.548);
+
+    overflow: auto;
+    scrollbar-color: rgba(45, 214, 197, 0.439) transparent;
+    display: grid;
+    grid-template-rows: 10% 10% 40% 10% 40%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.screen * {
+    color: white;
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.screen h1,h2{
+    text-align: center;
+    text-shadow: 2px 0px 2px white;
+}
+
+.screen h1{
+    grid-row: 1;
+    grid-column: 1/6;
+}
+
+.p1{
+    grid-row: 3;
+    grid-column: 1/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+.p1 img{
+    height: 250px;
+    margin: 30px;
+    filter: drop-shadow(3px 3px 3px rgb(255, 180, 127)) drop-shadow(-3px -3px 3px rgb(255, 106, 176));
+}
+
+#introimg{
+    height: 250px;
+    grid-row: 3;
+    grid-column: 4;
+}
+
+.p2{
+    grid-row: 5;
+    grid-column: 2/6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+.p2 img{
+    height: 180px;
+    margin: 30px;
+    filter: drop-shadow(1px 1px 1px rgb(255, 255, 255)) drop-shadow(-1px -1px 1px rgb(255, 255, 255));
+}
+
+/*.powernav{
+    grid-column: 10;
+    grid-row: 2/9;
+    display: grid;
+    grid-template-rows: 40% 30% 30%;
+}
+
+.power{
+    background-color: rgb(216, 63, 49);
+    border-radius: 250px;
+    margin: 50px 10px;
+    grid-row: 1/2;
+    box-shadow: 8px 8px 0px 0px black;
+}*/
+
+@media screen and (min-width: 1800px) {
+    .screen{
+        grid-template-rows: 10% 40% 50%;
+    }
+
+    .p1{
+        grid-row: 2;
+    }
+
+    #introimg{
+        grid-row: 2;
+        grid-column: 4;
+        transform: translateY(30px);
+    }
+
+    .p2{
+        grid-row: 3;
+        grid-column: 3/6;
+    }
+  }
